@@ -43,4 +43,17 @@
             gap: 10px;
         }
     }
+    
+    &--center {
+        height: 450px;
+
+        .hero__content {
+            align-items: center;
+            text-align: center;
+
+            .hero__content__subtitle {
+                justify-content: center;
+            }
+        }
+    }
 }
