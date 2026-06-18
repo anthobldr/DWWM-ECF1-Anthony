@@ -4,9 +4,11 @@
 @import "./base/typographie";
 // Fichier components
 @import "./components/buttons";
+@import "./components/input";
 // Fichier layouts
 @import "./layout/navbar";
 @import "./layout/hero";
 @import "./layout/footer";
 //Fichier pages
-@import "./pages/accueil.scss"
+@import "./pages/accueil.scss";
+@import "./pages/programmations.scss";

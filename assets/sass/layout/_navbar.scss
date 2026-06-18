@@ -25,6 +25,10 @@
             list-style: none;
             li{
                 font-family: "Montserrat";
+                a{
+                    color: $white;
+                    text-decoration: none;
+                }
             }
         }
     }
