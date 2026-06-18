@@ -2,27 +2,131 @@ $white: #F5F0E8;
 $black: #1A1A1A;
 $yellow: #D4A843;
 $red: #6B1D3A;
-*{
+$dark-bg: #2A2D34;
+
+$bp-xl: 1200px;
+$bp-lg: 992px;
+$bp-md: 768px;
+$bp-sm: 576px;
+
+* {
     margin: 0;
     padding: 0;
 }
 
-h1{
+h1 {
     text-align: start;
     font-size: 48px;
     letter-spacing: 2px;
+    
+    @media (max-width: $bp-md) {
+        font-size: 36px;
+    }
+    
+    @media (max-width: $bp-sm) {
+        font-size: 28px;
+    }
 }
-h2{
+
+h2 {
     font-size: 28px;
     font-weight: normal;
     letter-spacing: 2px;
+    
+    @media (max-width: $bp-md) {
+        font-size: 24px;
+    }
+    
+    @media (max-width: $bp-sm) {
+        font-size: 20px;
+    }
 }
-h3{
+
+h3 {
     font-family: "Montserrat";
     font-size: 24px;
     font-weight: normal;
+    
+    @media (max-width: $bp-md) {
+        font-size: 20px;
+    }
+    
+    @media (max-width: $bp-sm) {
+        font-size: 18px;
+    }
 }
-p{
+
+p {
     font-size: 24px;
     opacity: 70%;
+    
+    @media (max-width: $bp-md) {
+        font-size: 18px;
+    }
+    
+    @media (max-width: $bp-sm) {
+        font-size: 16px;
+    }
+}
+
+@mixin button-base {
+    text-decoration: none;
+    font-family: "Playfair Display";
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 10px 15px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    @media (max-width: $bp-sm) {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@mixin card-overlay {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+}
+
+@mixin card-base {
+    position: relative;
+    height: 300px;
+    border-radius: 4px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    @media (max-width: $bp-sm) {
+        height: 260px;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin section-padding {
+    padding: 50px;
+    
+    @media (max-width: $bp-lg) {
+        padding: 40px;
+    }
+    
+    @media (max-width: $bp-md) {
+        padding: 30px;
+    }
+    
+    @media (max-width: $bp-sm) {
+        padding: 20px;
+    }
 }

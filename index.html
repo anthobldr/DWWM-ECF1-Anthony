@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/main.min.css">
-    <title>Document</title>
+    <title>LE PHOSPHORE - Salle de Spectacle</title>
 </head>
 <body>
     <header>
@@ -17,7 +17,11 @@
                 <ul>
                     <li><a href="/">Accueil</a></li>
                     <li><a href="/programmation.html">Programmations</a></li>
-                    <li><a href="/">Infos pratiques</a></li>
+                    <li><a href="/infos-pratiques.html">Infos pratiques</a></li>
+
+                    <li class="navbar__mobile-cta">
+                        <a href="#" class="button--secondary">BILLETTERIE</a>
+                    </li>
                 </ul>
             </div>
             <div class="navbar__cta">
@@ -25,6 +29,11 @@
                     BILLETTERIE
                 </button>
             </div>
+            <button class="navbar__burger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
     <main>
@@ -94,7 +103,7 @@
                 <p class="about__services-text">
                     Profitez de notre bar, restaurant et vestiaire pour une expérience complète. Détendez-vous dans une atmosphère conviviale et bénéficiez de tous les services sur place.
                 </p>
-                <a href="" class="button--secondary">Découvrir</a>
+                <a href="/infos-pratiques.html" class="button--secondary">Découvrir</a>
             </div>
         </section>
     </main>
@@ -137,6 +146,7 @@
             </div>
         </div>
     </footer>
+    <script src="./assets/js/navbar.js"></script>
     <script src="./assets/js/top-programmation.js"></script>
 </body>
 </html>

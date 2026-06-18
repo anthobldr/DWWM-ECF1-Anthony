@@ -1,9 +1,27 @@
 .hero {
     color: $white;
     background-image: url("../images/background-cover.webp");
+    background-size: cover;
+    background-position: center;
     height: calc(100vh - 60px);
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    
+    @media (max-width: $bp-lg) {
+        height: 600px;
+    }
+    
+    @media (max-width: $bp-md) {
+        height: 500px;
+        padding: 30px 20px;
+    }
+    
+    @media (max-width: $bp-sm) {
+        height: 400px;
+        padding: 20px 15px;
+    }
     
     &__content {
         display: flex;
@@ -11,14 +29,38 @@
         gap: 10px;
         align-items: flex-start;
         justify-content: center;
+        max-width: 600px;
+        
+        @media (max-width: $bp-md) {
+            max-width: 100%;
+        }
         
         &__title {
+            @media (max-width: $bp-sm) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+            
             img {
                 width: 90px;
                 height: 90px;
+                
+                @media (max-width: $bp-md) {
+                    width: 70px;
+                    height: 70px;
+                }
+                
+                @media (max-width: $bp-sm) {
+                    width: 50px;
+                    height: 50px;
+                }
             }
         }
-        &__subtitle{
+        
+        &__subtitle {
             text-align: start;
             font-family: "Montserrat";
             color: $yellow;
@@ -26,31 +68,76 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            .spacer{
+            
+            @media (max-width: $bp-sm) {
+                justify-content: center;
+                width: 100%;
+                font-size: 18px;
+                gap: 10px;
+            }
+            
+            .spacer {
                 width: 30px;
                 height: 2px;
                 background: $yellow;
                 flex-shrink: 0;
+                
+                @media (max-width: $bp-sm) {
+                    width: 20px;
+                }
             }
         }
-        &__description{
+        
+        &__description {
             opacity: 70%;
-            width: 400px;
+            
+            @media (max-width: $bp-md) {
+                max-width: 100%;
+            }
+            
+            @media (max-width: $bp-sm) {
+                text-align: center;
+                width: 100%;
+                font-size: 16px;
+            }
         }
-        &__tabs{
+        
+        &__tabs {
             margin-top: 10px;
             display: flex;
             gap: 10px;
+            
+            @media (max-width: $bp-md) {
+                flex-wrap: wrap;
+            }
+            
+            @media (max-width: $bp-sm) {
+                flex-direction: column;
+                width: 100%;
+                
+                a {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
         }
     }
     
     &--center {
         height: 450px;
-
+        
+        @media (max-width: $bp-md) {
+            height: 350px;
+        }
+        
+        @media (max-width: $bp-sm) {
+            height: 300px;
+        }
+        
         .hero__content {
             align-items: center;
             text-align: center;
-
+            
             .hero__content__subtitle {
                 justify-content: center;
             }

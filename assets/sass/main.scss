@@ -10,5 +10,34 @@
 @import "./layout/hero";
 @import "./layout/footer";
 //Fichier pages
-@import "./pages/accueil.scss";
-@import "./pages/programmations.scss";
+@import "./pages/_accueil";
+@import "./pages/_programmations";
+@import "./pages/_infos-pratiques";
+
+html,
+body {
+    height: 100%;
+    font-family: "Playfair Display", serif;
+}
+
+body {
+    background-color: $white;
+    color: $black;
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    min-height: calc(100vh - 56px);
+}

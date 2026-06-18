@@ -15,9 +15,13 @@
             </div>
             <div class="navbar__menulist">
                 <ul>
-                    <li>Accueil</li>
-                    <li>Programmations</li>
-                    <li>Infos pratiques</li>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/programmation.html">Programmations</a></li>
+                    <li><a href="/infos-pratiques.html">Infos pratiques</a></li>
+
+                    <li class="navbar__mobile-cta">
+                        <a href="#" class="button--secondary">BILLETTERIE</a>
+                    </li>
                 </ul>
             </div>
             <div class="navbar__cta">
@@ -25,6 +29,11 @@
                     BILLETTERIE
                 </button>
             </div>
+            <button class="navbar__burger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
     <main>
@@ -99,5 +108,6 @@
         </div>
     </footer>
     <script src="./assets/js/programmations.js"></script>
+    <script src="./assets/js/navbar.js"></script>
 </body>
 </html>

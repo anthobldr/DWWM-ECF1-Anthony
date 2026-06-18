@@ -1,158 +1,136 @@
 .programmations {
-    padding: 3rem;
-
+    @include section-padding;
+    
     &__tabs {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 1rem;
         margin-bottom: 3rem;
-
+        
+        @media (max-width: $bp-lg) {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        
+        @media (max-width: $bp-sm) {
+            gap: 0.75rem;
+        }
+        
         &-button {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-
+            
+            @media (max-width: $bp-md) {
+                justify-content: center;
+            }
+            
             button {
                 color: $black;
                 background: transparent;
+                
+                &:hover {
+                    color: $yellow;
+                }
             }
         }
-
+        
         &-input {
             display: flex;
             gap: 1rem;
-
+            
+            @media (max-width: $bp-lg) {
+                width: 100%;
+            }
+            
+            @media (max-width: $bp-sm) {
+                flex-direction: column;
+            }
+            
             input {
-                padding: 0.75rem 1rem;
-                border: 1px solid rgba($black, 0.15);
-                border-radius: 4px;
+                flex: 1;
+                
+                @media (max-width: $bp-sm) {
+                    width: 100%;
+                }
             }
         }
     }
-
+    
     &__cardlist {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
-    }
-
-    &__card {
-        position: relative;
-        height: 300px;
-        border-radius: 4px;
-        overflow: hidden;
-
-        background-size: cover;
-        background-position: center;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        &::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top,rgba(0, 0, 0, 0.85),rgba(0, 0, 0, 0.2));
-            z-index: 1;
+        
+        @media (max-width: $bp-lg) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
         }
-
+        
+        @media (max-width: $bp-md) {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+    }
+    
+    &__card {
+        @include card-base;
+        
+        &::before {
+            @include card-overlay;
+        }
+        
         &-tag {
             position: relative;
             z-index: 2;
-
             align-self: flex-start;
-
             margin: 1rem;
             padding: 0.3rem 0.8rem;
-
             font-size: 0.75rem;
             text-transform: uppercase;
-
             border-radius: 4px;
-
             color: $white;
             background-color: $red;
         }
-
+        
         &-content {
             position: relative;
             z-index: 2;
             padding: 1.5rem;
         }
-
+        
         &-title {
             color: $white;
             margin-bottom: 0.5rem;
         }
-
+        
         &-date {
             color: $white;
             opacity: 0.7;
             margin-bottom: 1rem;
+            
+            @media (max-width: $bp-sm) {
+                font-size: 0.9rem;
+            }
         }
-
+        
         &-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 0.75rem;
-
-            .button--secondary {
-                color: $white !important;
-            }
-        }
-    }
-}
-
-@media (max-width: 992px) {
-    .programmations {
-        padding: 2rem;
-
-        &__tabs {
-            flex-direction: column;
-            align-items: stretch;
-
-            &-input {
-                width: 100%;
-
-                input {
-                    flex: 1;
-                }
-            }
-        }
-        &__cardlist{
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-}
-
-@media (max-width: 576px) {
-    .programmations {
-        padding: 1.5rem;
-
-        &__tabs {
-            &-button {
-                justify-content: center;
-            }
-
-            &-input {
+            
+            @media (max-width: $bp-sm) {
                 flex-direction: column;
-            }
-        }
-        &__cardlist{
-            grid-template-columns: 1fr;
-        }
-        &__card {
-            height: 260px;
-
-            &-actions {
-                flex-direction: column;
-
+                
                 a {
                     width: 100%;
                     text-align: center;
                 }
+            }
+            
+            .button--secondary {
+                color: $white !important;
             }
         }
     }
