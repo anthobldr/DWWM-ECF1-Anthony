@@ -1,0 +1,46 @@
+.hero {
+    color: $white;
+    background-image: url("../images/background-cover.webp");
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: center;
+        
+        &__title {
+            img {
+                width: 90px;
+                height: 90px;
+            }
+        }
+        &__subtitle{
+            text-align: start;
+            font-family: "Montserrat";
+            color: $yellow;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            .spacer{
+                width: 30px;
+                height: 2px;
+                background: $yellow;
+                flex-shrink: 0;
+            }
+        }
+        &__description{
+            opacity: 70%;
+            width: 400px;
+        }
+        &__tabs{
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+    }
+}

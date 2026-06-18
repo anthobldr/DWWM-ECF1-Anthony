@@ -1,0 +1,12 @@
+// Fichier abstracts
+@import "./abstracts/variables";
+// Fichier base
+@import "./base/typographie";
+// Fichier components
+@import "./components/buttons";
+// Fichier layouts
+@import "./layout/navbar";
+@import "./layout/hero";
+@import "./layout/footer";
+//Fichier pages
+@import "./pages/accueil.scss"

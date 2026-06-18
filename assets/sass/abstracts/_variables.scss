@@ -1,0 +1,28 @@
+$white: #F5F0E8;
+$black: #1A1A1A;
+$yellow: #D4A843;
+$red: #6B1D3A;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: start;
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+h2{
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+h3{
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: normal;
+}
+p{
+    font-size: 24px;
+    opacity: 70%;
+}

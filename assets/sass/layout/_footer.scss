@@ -1,0 +1,70 @@
+.footer {
+
+  &__header{
+    background-color: $black;
+    padding: 50px 25px;
+    display: flex;
+    gap: 50px;
+    &__phosphore, &__nav, &__infos {
+        flex: 1;
+    }
+
+    &__phosphore {
+        > div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: $white;
+        }
+        span { 
+            font-size: 24px; 
+        }
+        img { 
+            width: 50px; 
+            height: 50px; 
+        }
+        p { 
+            color: $white; 
+            font-size: 16px; 
+        }
+    }
+
+    &__nav-title, &__infos-title {
+        font-size: 24px;
+        letter-spacing: 2px;
+        color: $white;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    &__nav ul, &__infos ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+
+        li {
+        color: $white;
+        opacity: 70%;
+        }
+    }
+  }
+  &__bottom{
+    padding: 20px 25px;
+    background-color: $red;
+    display: flex;
+    color: $white;
+    &__copyright{
+        flex: 1;
+        text-align: center;
+    }
+    &__legal{
+        flex: 1;
+        ul{
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+    }
+  }
+}
