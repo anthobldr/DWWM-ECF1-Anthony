@@ -2,11 +2,10 @@ const map = document.getElementById('salleMap');
   const tip = document.getElementById('salleTooltip');
 
   for (let r = 0; r < 8; r++) {
-    const lettre = String.fromCharCode(65 + r); // A, B, C…
+    const lettre = String.fromCharCode(65 + r);
     const rangee = document.createElement('div');
     rangee.className = 'access__salle-row';
 
-    // Étiquette
     const label = document.createElement('span');
     label.className = 'access__salle-label';
     label.textContent = lettre;

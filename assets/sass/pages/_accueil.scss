@@ -271,3 +271,15 @@
         }
     }
 }
+
+.rideaux{
+    position:fixed;
+    top:0;
+    width:50%;
+    height:100vh;
+    background: $red;
+    z-index:1000;
+}
+
+.left{ left:0; }
+.right{ right:0; }

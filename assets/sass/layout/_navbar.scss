@@ -87,6 +87,9 @@
                         color: $yellow;
                     }
                 }
+                .active{
+                    color: $yellow;
+                }
             }
         }
     }
@@ -94,14 +97,14 @@
        display: none;
        
        @media (max-width: $bp-md) {
-           display: flex;  // ✨ Visible en mobile
+           display: flex;
        }
    }
     &__cta {
        display: flex;
        
        @media (max-width: $bp-md) {
-           display: none;  // ✨ Caché en mobile
+           display: none; 
        }
    }
     

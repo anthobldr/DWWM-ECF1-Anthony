@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/main.min.css">
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <title>Le Phosphore | Infos Pratiques</title>
+    <title>Le Phosphore | Mentions Légales</title>
 </head>
 <body>
     <header>
@@ -41,31 +41,25 @@
         <section class="hero hero--center">
             <div class="hero__content">
                 <div class="hero__content__title">
-                    <h1>PROGRAMMATION</h1>
+                    <h1>MENTIONS LÉGALES</h1>
                 </div>
-                <div class="hero__content__subtitle">
-                    <span>TOUS NOS SPECTACLES</span>
-                </div>
-                <p class="hero__content__description">Thèâtre, concerts, stand-up: <br>Toute une programmation pour vibrer toute l'année</p>
             </div>
         </section>
-        <section class="programmations">
-            <div class="programmations__tabs">
-                <div class="programmations__tabs-button">
-                    <button class="button--secondary">TOUT</button>
-                    <button class="button--secondary">THÉÂTRE</button>
-                    <button class="button--secondary">CONCERT</button>
-                    <button class="button--secondary">STAND-UP</button>
-                </div>
-                <div class="programmations__tabs-input">
-                    <input type="text" placeholder="Rechercher un événements">
-                    <input type="date">
-                </div>
+        <section class="mentions-legales">
+            <h2 class="mentions-legales__title">INFORMATIONS LÉGALES</h2>
+            <div class="mentions-legales__editeur">
+                <h3>ÉDITEUR DU SITE</h3>
+                <span><strong>Raison Sociale: </strong>Phosphore</span>
+                <span><strong>Forme juridique: </strong>SARL</span>
+                <span><strong>Siret: </strong> XXXXXXXXXXXX</span>
+                <span><strong>Adresse: </strong> 12 rue des Arts, 33000 Bordeaux</span>
+                <span><strong>Email: </strong>contact@phosphore.fr</span>
             </div>
-            <div class="programmations__list">
-                <div class="programmations__cardlist">
-
-                </div>
+            <div class="mentions-legales__hebergement">
+                <h3>HÉBERGEMENT</h3>
+                <span><strong>Hebergeur: </strong>O2Switch</span>
+                <span><strong>Adresse: </strong>Chemin des Pardiaux, 63000 Clermont-Ferrand</span>
+                <span><strong>Email: </strong>support@o2switch.fr</span>
             </div>
         </section>
     </main>
@@ -108,52 +102,5 @@
             </div>
         </div>
     </footer>
-    <div class="modal" id="spectacleModal">
-        <div class="modal__overlay"></div>
-
-        <div class="modal__container">
-            <button class="modal__close">&times;</button>
-
-            <div class="modal__content">
-                <div class="modal__image-wrapper">
-                    <img class="modal__image" src="" alt="Image du spectacle" loading="lazy">
-                </div>
-
-                <div class="modal__infos">
-                    <h2 class="modal__title"></h2>
-
-                    <div class="modal__meta">
-                        <h3>Artiste: <span class="modal__artist"></span></h3>
-                        <h3>Date: <span class="modal__date"></span></h3>
-                        <h3>Heure: <span class="modal__hour"></span></h3>
-                        <h3>Durée: <span class="modal__duration"></span></h3>
-                        <h3>Prix: <span class="modal__price"></span></h3>
-                    </div>
-
-                    <p class="modal__description"></p>
-
-                    <div class="modal__places">
-                        <div class="modal__places-header">
-                            <span>Places restantes</span>
-                            <span class="modal__places-count"></span>
-                        </div>
-
-                        <div class="modal__progress">
-                            <div class="modal__progress-bar"></div>
-                        </div>
-                    </div>
-
-                    <a href="#" class="button--primary">
-                        RÉSERVER
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type="module" src="./assets/js/programmations/programmations.js"></script>
-    <script src="./assets/js/navbar.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="./assets/js/gsap.js"></script>
 </body>
 </html>

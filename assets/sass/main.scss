@@ -8,11 +8,13 @@
 // Fichier layouts
 @import "./layout/navbar";
 @import "./layout/hero";
+@import "./layout/modal";
 @import "./layout/footer";
 //Fichier pages
 @import "./pages/_accueil";
 @import "./pages/_programmations";
 @import "./pages/_infos-pratiques";
+@import "./pages/mentions-legales";
 
 html,
 body {
